@@ -5,7 +5,7 @@ module TranslatableRoutes
 
       def localized
         @locales = I18n.available_locales
-        scope(':locale') { yield }
+        yield
         @locales = nil
       end
 
